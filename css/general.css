@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+:root{
+    --titleColor: rgb(30, 31, 30);
+    --navHoverColor: #ff6d34;
+}
+
+.container{
+    width: clamp(100px, 90%, 1280px);
+    margin: auto;
+}
+
+
+.notics{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--titleColor);
+    padding: 10px;
+}
+
+.notics span{
+    font-size: 20px;
+    color: white;
+    transform: translateX(-10%);
+}

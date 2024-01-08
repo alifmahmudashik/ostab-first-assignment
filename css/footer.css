@@ -1,0 +1,190 @@
+.secFooterNews {
+    padding: 90px 0px;
+    background: rgb(98, 85, 174);
+}
+
+.footerNewsLetter {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+@media screen and (max-width: 800px) {
+    .secFooterNews {
+        padding: 50px;
+        margin-left: -20px;
+    }
+
+    .footerNewsLetter {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+.newsletterTitle {
+    flex: 1 1 0%;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+
+.newsletterInput {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: row;
+}
+
+.newsletterInput input {
+    font-size: clamp(10px, 1.8vw, 19px);
+    padding: 15px 30px;
+    border: 1px solid black;
+    box-shadow: rgb(79, 68, 140) -8px 8px;
+    z-index: 10;
+    outline: none;
+}
+
+.newsletterInput button {
+    padding: 0px 25px;
+    border: 1px solid black;
+    outline: none;
+    box-shadow: rgb(79, 68, 140) -8px 8px;
+    background-color: rgb(68, 181, 143);
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.footerWarpper {
+    display: flex;
+    flex-direction: row;
+    padding: 150px 0px 250px 0px;
+}
+
+.footerLeft {
+    flex: 1.5;
+}
+
+.footerMiddle {
+    flex: 1;
+}
+
+.footerRight {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+footer.footerMain {
+    background: #190c66;
+    color: white;
+    position: relative;
+}
+
+.footerMiddle ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.footerMiddle ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footerMiddle ul li a:hover{
+    text-decoration: underline;
+}
+
+.langTitle{
+    color: hsla(0,0%,100%,.5);
+}
+.language h4{
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.socialMediaIcons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.inconBox {
+    display: flex;
+    flex-direction: row;
+    column-gap: 13px;
+}
+
+.inconBox i {
+    font-size: 20px;
+}
+
+h4.workingHourTittle {
+    font-size: 18px;
+    color: hsla(0,0%,100%,.5);
+    font-weight: 400;
+}
+
+.support h4 {font-weight: 400;margin-bottom: 5px;}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.socialMediaIcons a {
+    color: white;
+    text-decoration: none;
+}
+
+h4.workingHourTittle {
+    font-size: 18px;
+    color: hsla(0,0%,100%,.5);
+    font-weight: 400;
+}
+
+.support h4 {font-weight: 400;margin-bottom: 5px;}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.socialMediaIcons a {
+    color: white;
+    text-decoration: none;
+}
+
+.footerLeft h4 {
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.lineBottom{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.lineBottom img{
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .footerWarpper{
+        flex-direction: column;
+        padding: 100px 0px 150px 0px;
+        row-gap: 55px;
+    }
+    .lineBottom img{
+        width: 30%;
+    }
+    
+}

@@ -1,0 +1,219 @@
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 100;
+}
+
+.headerLeft, .headerRight{
+    transform: translateY(0px);
+    animation: headerAnimtion 0.5s forwards;
+}
+
+@keyframes headerAnimtion {
+    from{
+    transform: translateY(-75px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+
+.headerWrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.headerLeft{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.headerLogo{
+    width: 100px;
+}
+
+.headerLogo a img{
+    width: 100%;
+}
+
+.headerNav{
+    flex: 1;
+}
+
+.headerNav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.headerNav ul li a{
+    text-decoration: none;
+    margin-right: 30px;
+    color: var(--titleColor);
+    font-weight: 500;
+    transition: color 0.15s;
+    position: relative;
+}
+
+.headerNav ul li a:hover{
+    color: var(--navHoverColor);
+}
+
+.headerNav ul li a:hover::after{
+    content: "";
+    padding: 1px;
+    background: var(--navHoverColor);
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    animation: navVarAnimation 0.5s forwards;
+}
+
+@keyframes navVarAnimation {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+.headerRight{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hireMeBtn{
+    padding: 8px 22px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: -6px 6px #7DCE9F;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    background: #27ae60;
+    color: white;
+    margin-top: -5px;
+    border: 1px solid var(--titleColor);
+}
+
+.hireMeBtn:hover {
+    box-shadow: -3px 3px #7DCE9F;
+}
+
+.navMenuIcon{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: rgb(30, 31, 30);
+}
+
+@media screen and (max-width: 910px ) {
+    .headerNav, .hireMeBtn{
+        display: none;
+    }
+    .navMenuIcon{
+        display: inline-block;
+    }
+    .mobileNavMenu{
+        display: inline-block;
+    }
+    .mobileNavMenu{
+        display: inline-block;
+    }
+}
+
+.mobileNavMenu{
+    position: fixed;
+    left: 0;
+    bottom: unset;
+    right: 0;
+    top: 0;
+    background:#effffd;
+    animation: phoneMenu 0.5s forwards;
+    z-index: 100;
+    display: none;
+}
+
+@media screen and (min-width: 910px ) {
+    .mobileNavMenu{
+        display: none;
+    }
+}
+
+@keyframes phoneMenu {
+    from{
+        bottom: unset;
+    }
+    to{
+        bottom: 0;
+    }
+}
+
+.mobileMenuWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.MobileMenuNav ul{
+    list-style: none;
+    display: flex;
+    row-gap: 12px;
+    flex-direction: column;
+    animation: phoneNavList 0.3s forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.MobileMenuNav ul li a{
+    text-decoration: none;
+    color: var(--titleColor);
+    font-weight: 500;
+    transition: color 0.15s;
+    position: relative;
+    font-size: 18px;
+    
+}
+
+@keyframes phoneNavList {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.MobileMenuNav ul li a:hover::after{
+    content: "";
+    padding: 1px;
+    background: var(--navHoverColor);
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    animation: navVarAnimation 0.5s forwards;
+}
+
+.phoneCloseNav{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 35px;
+}
